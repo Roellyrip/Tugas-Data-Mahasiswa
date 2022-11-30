@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+</head>
+<body bgcolor="lightblue">
+        
+        <h1 align="center">Data Mahasiswa</h1>
+        <h2 align="center">Universitas Komputer Indonesia</h2>
+        <hr color="black">
+    <form name="fform"><pre>
+        NIM               : <input type="number" size="20" name="inim"><br>
+        Nama Mahasiswa    : <input type="text" size="20" name="inama"><br>
+        Jenis Kelamin     : <select name="ijeniskel" size="1" id="">
+                            <option value="Pria">Pria</option>
+                            <option value="Wanita">Wanita</option>
+                          </select><br>
+        Agama             : <select name="iagama" size="1" id="">
+                            <option value="Kristen">Kristen</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Budha">Budha</option>
+                            <option value="Katolik">Katolik</option>
+                            <option value="Konghucu">Konghucu</option>
+                            </select><br>
+        Status            : <input type="radio" value="Kawin" name="istatus"> Kawin <br>
+        Jurusan Di Unikom : <select name="ijurusan" size="1"> 
+                            <option value="Teknik Rekayasa Internet"> Teknik Rekayasa Internet </option> 
+                            <option value="Teknik Pertambangan"> Teknik Pertambangan </option> 
+                            <option value="Teknik Sipil"> Teknik Sipil </option> 
+                            <option value="Teknik Listrik"> Teknik Listrik </option> 
+                            <option value="Teknik Mesin"> Teknik Mesin </option> 
+                            </select><br>
+        Komentar          : <textarea name="ikomentar" rows="3" cols="30" ></textarea><br> 
+        </pre>
+        <center> 
+            <input type="button" value="Kirim" onclick="yes(this.form)"> 
+            <input type="reset" value="Ulang"></center><br> 
+            <hr color="black">
+            <h2><b> Data Mahasiswa Universitas Komputer Indonesia </h2></b><pre> 
+                
+            NIM               : <input type="text" size="20" name="onim"><br> 
+            Nama Mahasiswa    : <input type="text" size="20" name="onama"><br>
+            Jenis Kelamin     : <input type="text" size="20" name="ojenis"><br>
+            Agama             : <input type="text" size="20" name="oagama"><br>
+            Status            : <input type="text" size="20" name="ostatus"><br>
+            Jurusan Di Unikom : <input type="text" size="20" name="ojurusan"><br>
+            Komentar          : <textarea name="okomentar" rows="3" cols="30"></textarea></pre><br> 
+                
+    </form>
+
+    <script>
+    function yes(form) 
+            { 
+
+                var nim=(document.fform.inim.value); 
+                var nama=(document.fform.inama.value); 
+                var jeniskel=(document.fform.ijeniskel.value); 
+                var agama=(document.fform.iagama.value); 
+                var status=""; 
+                if(form.istatus.checked==true) 
+                {status="Kawin";} 
+                    else 
+                {status="Belum Kawin";} 
+                var jurusan=(document.fform.ijurusan.value); 
+                var komentar=(document.fform.ikomentar.value); 
+                document.fform.onim.value=nim; 
+                document.fform.onama.value=nama;
+                document.fform.ojenis.value=jeniskel; 
+                document.fform.oagama.value=agama; 
+                document.fform.ostatus.value=status; 
+                document.fform.ojurusan.value=jurusan; 
+                document.fform.okomentar.value=komentar; 
+
+            } 
+            </script> 
+        </body>
+</html>
